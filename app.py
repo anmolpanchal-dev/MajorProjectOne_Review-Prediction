@@ -131,7 +131,6 @@ def predict_review(review_text):
     final_label   = label_norm(final)
     sent_labels   = [label_norm(p) for p in preds]
 
-    # Confidence
     if hasattr(model, 'predict_proba'):
         proba      = model.predict_proba(vectors)
         classes    = [str(c).lower() for c in model.classes_]
